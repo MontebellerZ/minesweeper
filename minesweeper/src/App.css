@@ -1,0 +1,158 @@
+html,
+body,
+#root {
+	height: 100vh;
+	width: 100vw;
+}
+
+button {
+	color: inherit;
+}
+
+.App {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	align-items: stretch;
+	justify-items: center;
+	grid-template-rows: auto 1fr;
+	overflow-y: hidden;
+	background-color: #29241b;
+	padding: 30px;
+	gap: 10px;
+}
+
+#configs {
+	display: grid;
+	align-items: flex-end;
+	justify-content: center;
+	grid-template-columns: repeat(2, 1fr) auto;
+	gap: 10px;
+}
+
+#configs label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#configs label input[type="number"]::-webkit-outer-spin-button,
+#configs label input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#configs label input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+#configs label input {
+	width: 50px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	border: 1px solid #594217;
+	outline: 0px;
+	padding: 4px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#configs button[type="submit"] {
+	aspect-ratio: 1;
+	border: 0px solid transparent;
+	background-color: transparent;
+	color: orange;
+	font-size: 24px;
+	padding: 0px;
+	outline: 0px;
+	cursor: pointer;
+}
+
+#gameHolder {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#field {
+	position: relative;
+	aspect-ratio: 1;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	gap: 0px;
+	border: 1px solid black;
+	background-color: #38290e;
+	color: white;
+	box-sizing: border-box;
+}
+
+#status {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.statusCenter {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.statusCenter span:first-of-type {
+	font-size: 30px;
+}
+
+.statusCenter span:nth-of-type(2) {
+	font-size: 24px;
+}
+
+.cell {
+	width: 100%;
+	aspect-ratio: 1;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid black;
+	background-color: transparent;
+	background-size: 90% 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.bomb {
+	background-color: #910f0f;
+	background-image: url("https://play-lh.googleusercontent.com/pHMh7lpyML_1ItqaUnxc3pBzFymwyuv3f_C6Uqq8R5EhBA6qe7dvHhJF_SNAKkvIo2I");
+}
+
+.closed {
+	background-color: #594217;
+}
+
+.closed span {
+	color: transparent;
+	font-size: 8px;
+}
+
+.flagged {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_icon_orange_4.svg");
+}
+
+#modalHolder {
+	left: 0;
+	top: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(5px);
+}
