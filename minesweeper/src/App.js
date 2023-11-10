@@ -582,9 +582,9 @@ function App() {
 				</div>
 			</div>
 
-			<div id="modalHolder">
+			{/* <div id="modalHolder">
 				<div id="modal"></div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
